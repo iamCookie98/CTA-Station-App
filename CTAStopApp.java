@@ -12,6 +12,7 @@ import java.util.*;
 import java.io.*;
 
 public class CTAStopApp {
+	//To add all the stations
 	public static CTARoute alllines = new CTARoute();
 	public static CTARoute redline = new CTARoute("Red Line");
 	public static CTARoute greenline = new CTARoute("Green Line");

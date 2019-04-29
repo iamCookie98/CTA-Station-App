@@ -1,4 +1,5 @@
 package project;
+//Station class
  
 public class CTAStation extends GeoLocation{
 	private String name;
