@@ -1,0 +1,81 @@
+Description of the user interface -/5
+Description of the programmers' tasks
+Describe how you will read the input -/3
+Describe how you will process the data from the input file -/4
+Describe how you will store the data -/3
+How will you add/delete/modify data? -/5
+How will you search data? -/3
+Classes: List of names and descriptions -/7
+UML Class Diagrams -/10
+Testing Plan -/10
+
+	The menu options will be:
+		1. Display all station names
+		2. Display the stations with wheel chair access
+		3. Display the nearest station to a location
+		4. Display information for a station with a specific name
+			if there is more than 1 station with the same name, display all the station information with the given name
+		5. Modify/Edit a Station
+		6. Route from one station to another
+		7. Display information for all stations
+		8. Add a new station
+		9. Delete an existing station
+		10. Exit
+		
+Describe how you will read the input file.
+-Create an object for each line(all lines, red, green, blue, brown, purple, pink, orange, yellow)
+-The first thing that i will do is creating a file for the file to be stored
+-Then, i will create a scanner and set it as null
+-use the exception to try and catch the file
+-Iterate through all the lines in the file
+
+Describe how you will process the data from the input file.
+-After we got the data from each lines
+-We split each element by separating at the ","
+-Set a variable name for every index on each array
+-Set all variables to an object call station
+	-Classify the line for each station if its in red, green, blue, brown, purple, pink, orange, yellow
+	-add the station to the object that we created
+
+Describe how you will store the data (what objects will you store?)
+-So I will have an object called station that will have the data for each station(latitude, longitude, etc)
+-After we have the object(station), we will store it in CTARoute which is a list of object
+
+How will you add/delete/modify data?
+-In the CTARoute class, there will be add, remove, and modify taking a parameter (station)
+
+How will you search the data?
+-for adding a station, we will ask the user for the previous and next station
+-iterate through each CTARoute, ask for the route that the station is in
+-search for the previous and next station, find the larger index and add the station
+
+-for removing station, we will also ask for the station name
+-Iterate through all CTARoute
+-if we find the station, remove it
+
+-for modifying the station, ask the station name
+-iterate though all CTARoute
+-if we found the station, ask for all the information of the station
+
+List the classes you will need to implement your application.
+-CTARoute, CTAStopApp, CTAStops, and GeoLocation
+
+Test plan:
+1. try to print out all of the stations
+2. try to print out all the stations with the categorized route
+3. Display station with wheelchair and without wheelchair
+4. Display the nearest station with a specific latitude and longitude
+	(latitude and longitude of one of the station and see if the nearest location is that station)
+5. Display the nearest station with a random latitude and longitude
+6. Display information of a specific station.
+7. Display information of all the stations.
+8. Add a new station at the end of the route.
+9. Add a new station in between 2 stations.
+10. Add a new station in between multiple stations.
+11. Modify a station
+12. modify the station that just been added
+13. remove a station
+14. remove a station that just been added to the list
+15. Generate path for no transfer
+16. Generate path for one transfer
+17. Generate path for two transfer
